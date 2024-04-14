@@ -56,4 +56,4 @@ To-do :
 - type system for inputs and outputs
 - multi-selection for group actions on nodes
 - customizable context menu system
-
+- one-to-many links possibility
