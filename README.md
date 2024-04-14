@@ -3,6 +3,8 @@ A JavaScript implementation of a visual node-based environment, allowing users t
 
 ![Procedura Demo](https://github.com/TribeLoop/procedura/assets/99650975/daec802f-a8fc-4653-ae2d-be8b7dc2529c)
 
+**It's higly reccommended to start with the demo css and modify it as needed**
+
 How to use :
 
 ```javascript
@@ -49,8 +51,6 @@ function createNode() {
 // append node to main view
 PROCEDURA_VIEW.addNode(createNode())
 ```
-
-It's higly reccommended to start with the demo css and modify it as needed
 
 To-do :
 - type system for inputs and outputs
