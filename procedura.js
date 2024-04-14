@@ -15,6 +15,7 @@ var PView = /** @class */ (function () {
     };
     // remove node of the tree
     PView.prototype.removeNode = function (nodeElement) {
+        nodeElement.node.onRemove();
         for (var _i = 0, _a = nodeElement.node.inputs; _i < _a.length; _i++) {
             var input = _a[_i];
             if (input.cable) {
@@ -27,7 +28,6 @@ var PView = /** @class */ (function () {
                 this.removeCable(output.cable);
             }
         }
-        nodeElement.node.onRemove();
         nodeElement.remove();
     };
     // create and append the svg element that will store the paths elements
