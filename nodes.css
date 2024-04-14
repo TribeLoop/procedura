@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    background-color: #212020;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+path {
+    transition: stroke .05s;
+}
+path:hover {
+    stroke: #f44;
+    cursor: pointer;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+.node {
+    display: flex;
+    position: absolute;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: #414040;
+    color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 10px -5px #000;
+    box-sizing: border-box;
+    flex-direction: column;
+    user-select: none;
+}
+
+.node-delete {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 10px;
+    top: 14px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #f66;
+    cursor: pointer;
+}
+.node-delete:hover {
+    background-color: #f44;
+}
+
+.node-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.node-body {
+    display: flex;
+    flex: auto;
+    background-color: #313030;
+    justify-content: space-between;
+}
+
+.node-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.node-inputs, .node-outputs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 10px;
+}
+.node-outputs {
+    align-items: flex-end;
+}
+
+.node-input, .node-output {
+    background-color: #414040;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    width: max-content;
+}
+
+.node-input.connected, .node-output.connected {
+    background-color: #515050;
+}
+
+.node-input-dot, .node-output-dot {
+    min-width: 14px;
+    min-height: 14px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    box-sizing: border-box;
+}
+.node-input-name, .node-output-name {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    height: 20px;
+}
+
+
