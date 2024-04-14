@@ -29,7 +29,8 @@ function createNode() {
     // this function is called on every change on links, or higher nodes updates, and will trigger the onUpdate of all lower nodes
     newNode.onUpdate = (nodeObj, nodeContentElment) => { 
         // access node inputs this way
-        let inputValue = nodeObj.inputs[0].link.value
+        let inputValueA = nodeObj.inputs[0].link.value
+        let inputValueB = nodeObj.inputs[1].link.value
         
         // do your main stuff here
 
@@ -50,4 +51,9 @@ PROCEDURA_VIEW.addNode(createNode())
 ```
 
 It's higly reccommended to start with the demo css and modify it as needed
+
+To-do :
+- type system for inputs and outputs
+- multi-selection for group actions on nodes
+- customizable context menu system
 
