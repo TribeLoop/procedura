@@ -39,7 +39,7 @@ class PView {
     }
     // remove node of the tree
     removeNode(nodeElement: HTMLElement) {
-        nodeElement.node.onRemove()
+        nodeElement.node.onRemove(nodeElement.node, nodeElement.node.contentElement)
 
         for (let input of nodeElement.node.inputs) {
             if (input.cable) {
