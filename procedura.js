@@ -15,7 +15,7 @@ var PView = /** @class */ (function () {
     };
     // remove node of the tree
     PView.prototype.removeNode = function (nodeElement) {
-        nodeElement.node.onRemove();
+        nodeElement.node.onRemove(nodeElement.node, nodeElement.node.contentElement);
         for (var _i = 0, _a = nodeElement.node.inputs; _i < _a.length; _i++) {
             var input = _a[_i];
             if (input.cable) {
