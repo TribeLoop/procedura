@@ -39,6 +39,8 @@ class PView {
     }
     // remove node of the tree
     removeNode(nodeElement: HTMLElement) {
+        nodeElement.node.onRemove()
+
         for (let input of nodeElement.node.inputs) {
             if (input.cable) {
                 this.removeCable(input.cable)
@@ -49,7 +51,6 @@ class PView {
                 this.removeCable(output.cable)
             }
         }
-        nodeElement.node.onRemove()
         nodeElement.remove()
     }
     // create and append the svg element that will store the paths elements
@@ -416,4 +417,3 @@ class POutput {
         this.value = null
     }
 }
-
