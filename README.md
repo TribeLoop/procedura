@@ -49,3 +49,5 @@ function createNode() {
 PROCEDURA_VIEW.addNode(createNode())
 ```
 
+It's higly reccommended to start with the demo css and modify it as needed
+
